@@ -3,10 +3,8 @@ package main
 import (
 	"net/http"
 	"time"
-
-	"dbredis"
-
 	"github.com/gin-gonic/gin"
+	"wyfdc.com/dbredis"
 )
 
 func func1(c *gin.Context) {
@@ -17,7 +15,7 @@ func func1(c *gin.Context) {
 func main() {
 	dbcon := dbredis.DBConnetion{
 		Addr:     "127.0.0.1:6379",
-		Password: "", // no password set
+		Password: "123456", // no password set
 		DBIndex:  0,  // use default DB
 		PoolSize: 5,
 	}
